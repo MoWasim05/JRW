@@ -1,15 +1,16 @@
-const int LED = D4;
+// Assign D1 to a read-only variable for clarity
+const int LED_PIN = D1;
 
-// the setup function runs once the board is powered
+// The setup function runs once when the board powers on
 void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(LED, OUTPUT);
+  // Configure pin D1 as a digital output
+  pinMode(LED_PIN, OUTPUT);
 }
 
-// the loop function runs over and over again forever
+// The loop function runs continuously
 void loop() {
-  digitalWrite(LED, HIGH);  // change state of the LED by setting the pin to the HIGH voltage level
-  delay(1000);                      // wait for a second
-  digitalWrite(LED, LOW);   // change state of the LED by setting the pin to the LOW voltage level
-  delay(1000);                      // wait for a second
+  digitalWrite(LED_PIN, HIGH); // Send 3.3V to D1 (Turn LED ON)
+  delay(1000);                 // Wait for 1000 milliseconds (1 second)
+  digitalWrite(LED_PIN, LOW);  // Send 0V to D1 (Turn LED OFF)
+  delay(1000);                 // Wait for 1 second
 }
